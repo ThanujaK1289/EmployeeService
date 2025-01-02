@@ -67,7 +67,7 @@ public class EmployeeService {
         return !employeeMap.containsKey(id);
     }
 
-    // Refresh employee data asynchronously (Java 8 CompletableFuture)
+    // Refresh employee data asynchronously 
     public CompletableFuture<Void> refreshEmployeeDataAsync() {
         return CompletableFuture.runAsync(this::loadEmployees);
     }
