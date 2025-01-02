@@ -17,7 +17,7 @@ public class EmployeeService {
     private final Map<Integer, Employee> employeeMap = new HashMap<>();
     private final Lock lock = new ReentrantLock();
 
-    // Load employees from file (Java 8 features - Streams, Lambdas)
+    // Load employees from file 
     public void loadEmployees() {
         lock.lock();
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
